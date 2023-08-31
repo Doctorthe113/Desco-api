@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+desco-api/__init__.py
+desco-api/modules.py
+desco_api.egg-info/PKG-INFO
+desco_api.egg-info/SOURCES.txt
+desco_api.egg-info/dependency_links.txt
+desco_api.egg-info/requires.txt
+desco_api.egg-info/top_level.txt
