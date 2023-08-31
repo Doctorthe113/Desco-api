@@ -1,4 +1,5 @@
 # Made by The Doctor
+# https://pypi.org/project/descoApi/0.1/
 import requests
 
 balance_url = "http://prepaid.desco.org.bd/api/tkdes/customer/getBalance?accountNo=" # 1234567
