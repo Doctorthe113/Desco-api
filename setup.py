@@ -1,6 +1,6 @@
 from distutils.core import setup
 setup(
-    name = 'DESCO',         # How you named your package folder (MyLib)
+    name = 'desco-api',         # How you named your package folder (MyLib)
     packages = ['desco-api'],   # Chose the same as "name"
     version = '0.1',      # Start with a small number and increase it with every change you make
     license='GNU V3',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
