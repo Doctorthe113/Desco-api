@@ -8,7 +8,7 @@ setup(
     author = 'DoctorThe113',                   # Type in your name
     author_email = 'code.doc113@gmail.com',      # Type in your E-Mail
     url = 'https://github.com/Doctorthe113/Desco-api',   # Provide either the link to your github or to your website
-    download_url = 'https://github.com/Doctorthe113/Desco-api/archive/refs/tags/v_01.tar.gz',    # I explain this later on
+    download_url = 'https://github.com/Doctorthe113/Desco-api/releases/tag/v1.0',    # I explain this later on
     keywords = ['SOME', 'MEANINGFULL', 'KEYWORDS'],   # Keywords that define your package best
     install_requires=[            # I get to this in a second
             'requests',
