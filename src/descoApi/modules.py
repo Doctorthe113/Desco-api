@@ -9,24 +9,25 @@ class descoAPI():
         self.dailyConsume = "http://prepaid.desco.org.bd/api/tkdes/customer/getCustomerDailyConsumption?"
         self.recharge = "http://prepaid.desco.org.bd/api/tkdes/customer/getRechargeHistory?"
         self.account = accountNumber
+        self.meterNo = get(self.balanceURL, params={"accountNo": self.account}).json()["data"]["meterNo"]
 
-    def balanceCheck(self) -> int:
-        response = get(self.balanceURL, params={"accountNo": self.account}).json()
+    def balanceCheck(self):
+        response = get(self.balanceURL, params={"accountNo": self.account, "meterNo": self.meterNo}).json()
         balance = response["data"]
         return balance
 
-    def monthlyCheck(self, monthFrom, monthTo) -> str:
-        response = get(self.monthlyConsume, params={"accountNo": self.account, "monthFrom": monthFrom, "monthTo": monthTo}).json()
+    def monthlyCheck(self, monthFrom, monthTo):
+        response = get(self.monthlyConsume, params={"accountNo": self.account, "meterNo": self.meterNo, "monthFrom": monthFrom, "monthTo": monthTo}).json()
         balance = response["data"]
         return balance
 
-    def datecheck(self, dateFrom, dateTo) -> str:
-        response = get(self.dailyConsume, params={"accountNo": self.account, "dateFrom": dateFrom, "dateTo": dateTo}).json()
+    def datecheck(self, dateFrom, dateTo):
+        response = get(self.dailyConsume, params={"accountNo": self.account, "meterNo": self.meterNo, "dateFrom": dateFrom, "dateTo": dateTo}).json()
         balance = response["data"]
         return balance
 
-    def rechargeHistory(self, dateFrom, dateTo) -> str:
-        response = get(self.recharge, params={"accountNo": self.account, "dateFrom": dateFrom, "dateTo": dateTo}).json()
+    def rechargeHistory(self, dateFrom, dateTo):
+        response = get(self.recharge, params={"accountNo": self.account, "meterNo": self.meterNo, "dateFrom": dateFrom, "dateTo": dateTo}).json()
         balance = response["data"]
         return balance
 
